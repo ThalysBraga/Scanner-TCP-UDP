@@ -8,6 +8,8 @@ Este é um **scanner de portas TCP e UDP** simples, desenvolvido em Python, que 
 - Varredura de **portas UDP** enviando pacotes vazios e aguardando resposta.
 - Identifica portas **Abertas, Fechadas e Filtradas**.
 - Compatível com **Windows, Linux e macOS** sem necessidade de permissões de administrador.
+- **Interface gráfica moderna** usando `customtkinter`.
+- **Exportação de relatório** dos resultados da varredura em `.txt`.
 
 ## 🚀 Como Funciona?
 
@@ -28,51 +30,9 @@ O scanner segue estas regras:
 ## 🛠️ Requisitos
 
 - Python 3.x
+- [`customtkinter`](https://github.com/TomSchimansky/CustomTkinter)
 
-## 📥 Instalação
-
-Clone este repositório e entre na pasta do projeto:
-
-```bash
- git clone https://github.com/seu-usuario/scanner-portas.git
- cd scanner-portas
-```
-
-## ▶️ Como Usar
-
-Execute o script informando o IP e as portas a serem verificadas:
+Instale com:
 
 ```bash
-python scanner.py <IP> -p <PORTAS>
-```
-
-### 🔹 Exemplo
-
-Para escanear as portas **22, 80 e 443** no IP **192.168.1.1**:
-
-```bash
-python scanner.py 192.168.1.1 -p 22,80,443
-```
-
-### 🔹 Saída Esperada
-
-```plaintext
-Varredura de portas TCP em 192.168.1.1:
-  Porta TCP 22: Filtrada (sem resposta)
-  Porta TCP 80: Aberta
-  Porta TCP 443: Fechada ou Filtrada
-
-Varredura de portas UDP em 192.168.1.1:
-  Porta UDP 9: Aberta ou Filtrada (sem resposta)
-  Porta UDP 80: Fechada
-  Porta UDP 443: Fechada
-```
-
-## ⚠️ Aviso
-
-- O uso indevido deste script para escanear redes sem permissão pode ser **ilegal**.
-- Use apenas para **fins educacionais** ou **testes autorizados**.
-
-## 📜 Licença
-
-Este projeto é de código aberto e está sob a licença MIT.
+pip install customtkinter
